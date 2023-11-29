@@ -43,11 +43,18 @@ const personaMovieDB = {
 			console.log(personaMovieDB);
 		}
 	},
+	toggleVisibleMyDB: function() {
+		if (personaMovieDB.privat) {
+			personaMovieDB.privat = false;
+		} else {
+			personaMovieDB.privat = true;
+		}
+	},
 	writeYourGenres: function() {
 		for (let i = 1; i <=3; i++) {
 			personaMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
 		}
-	}
+	},
 };
 
 
